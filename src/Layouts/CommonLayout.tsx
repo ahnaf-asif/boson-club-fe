@@ -1,13 +1,14 @@
 import { AppShell } from '@mantine/core';
 import { CustomHeader } from './Components';
+import { StyledAppShell } from './CommonLayout.styles.tsx';
 
 export const CommonLayout = ({ children }: any) => {
   return (
-    <AppShell header={{ height: 60 }}>
+    <StyledAppShell>
       <AppShell.Header>
         <CustomHeader />
       </AppShell.Header>
       <AppShell.Main>{children}</AppShell.Main>
-    </AppShell>
+    </StyledAppShell>
   );
 };
