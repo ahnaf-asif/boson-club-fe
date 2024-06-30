@@ -1,6 +1,7 @@
 import { Text, Group, Burger, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { StyledDrawer, StyledHeader, StyledHeaderGroup } from './CustomHeader.styles.tsx';
+import { Link } from 'react-router-dom';
 
 export const CustomHeader = () => {
   const [burger, burgerAction] = useDisclosure();
@@ -15,9 +16,8 @@ export const CustomHeader = () => {
       <StyledHeaderGroup justify="space-between" align="center">
         <Text>Custom header</Text>
         <Group gap={40} visibleFrom="sm">
-          <Text>Item 1</Text>
-          <Text>Item 2</Text>
-          <Text>Item 3</Text>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
         </Group>
         <Burger opened={burger} onClick={burgerClicked} hiddenFrom="sm" />
         <StyledDrawer opened={burger} onClose={burgerClicked} title="Brand" size="100%">

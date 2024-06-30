@@ -1,13 +1,12 @@
-import { Box, Button, Text, Title } from '@mantine/core';
 import { CommonLayout } from '@/Layouts';
+import { AppRoutes } from '@/Routes/AppRoutes.tsx';
+import { Box } from '@mantine/core';
 
 function App() {
   return (
     <CommonLayout>
-      <Box m={20}>
-        <Title>Nice Title</Title>
-        <Text mt={10}>Hello world something</Text>
-        <Button mt={10}>Click me!</Button>
+      <Box mt={70}>
+        <AppRoutes />
       </Box>
     </CommonLayout>
   );
